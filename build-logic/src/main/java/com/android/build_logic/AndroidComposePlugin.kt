@@ -1,0 +1,13 @@
+package com.android.build_logic
+import com.android.build_logic.extensions.configureComposeAndroid
+import org.gradle.api.Plugin
+import org.gradle.api.Project
+
+class AndroidComposePlugin : Plugin<Project> {
+    override fun apply(project: Project) {
+        with(project) {
+            pluginManager.apply("org.jetbrains.kotlin.plugin.compose")
+            configureComposeAndroid()
+        }
+    }
+}
