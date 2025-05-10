@@ -28,10 +28,10 @@ fun AppNavGraph(
         startDestination = BottomNavItem.List.route
     ) {
         composable(BottomNavItem.List.route) {
-            PokemonListScreen(navController, listViewModel)
+            PokemonListScreen(navController, listViewModel, innerPadding)
         }
         composable(BottomNavItem.Favorites.route) {
-            FavoriteListScreen(navController, favoriteViewModel)
+            FavoriteListScreen(navController, favoriteViewModel, innerPadding)
         }
         composable("${DetailNav.ROUTE}/{${DetailNav.ARG_ID}}/{${DetailNav.ARG_IS_FAVORITE}}") { backStackEntry ->
             val pokemonId = backStackEntry.arguments?.getString(DetailNav.ARG_ID)?.toInt() ?: return@composable

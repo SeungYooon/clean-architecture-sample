@@ -6,6 +6,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
@@ -55,7 +56,8 @@ import com.android.list.viewmodel.PokemonListViewModel
 @Composable
 fun PokemonListScreen(
     navController: NavController,
-    viewModel: PokemonListViewModel
+    viewModel: PokemonListViewModel,
+    innerPadding: PaddingValues
 ) {
     val pokemonPagingItems = viewModel.pokemonPagingData.collectAsLazyPagingItems()
     val uiState by viewModel.uiState.collectAsState()
@@ -87,7 +89,8 @@ fun PokemonListScreen(
             PokemonListScreenContent(
                 pagingData = pokemonPagingItems,
                 onItemClick = onItemClick,
-                onToggleFavorite = onToggleFavorite
+                onToggleFavorite = onToggleFavorite,
+                innerPadding = innerPadding
             )
         }
     }
@@ -98,10 +101,13 @@ fun PokemonListScreenContent(
     pagingData: LazyPagingItems<PokemonModel>,
     onItemClick: (PokemonModel) -> Unit,
     onToggleFavorite: (PokemonModel) -> Unit,
+    innerPadding: PaddingValues
 ) {
     val listState = rememberLazyGridState()
 
-    Column(modifier = Modifier.fillMaxSize()) {
+    Column(modifier = Modifier
+        .fillMaxSize()
+        .padding(innerPadding)) {
         Text(
             text = "List",
             style = MaterialTheme.typography.headlineSmall,

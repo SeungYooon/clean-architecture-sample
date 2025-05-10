@@ -5,6 +5,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
@@ -39,6 +40,7 @@ import com.android.favorite.viewmodel.FavoriteViewModel
 fun FavoriteListScreen(
     navController: NavController,
     viewModel: FavoriteViewModel,
+    innerPadding: PaddingValues
 ) {
     val favorites by viewModel.favorites.collectAsState()
 
@@ -46,18 +48,24 @@ fun FavoriteListScreen(
         favorites = favorites,
         onClick = { pokemon ->
             navController.navigate(DetailNav.routeWithArgs(pokemon.id, isFavorite = true))
-        }
+        },
+        innerPadding = innerPadding
     )
 }
 
 @Composable
 fun FavoriteListScreenContent(
     favorites: List<PokemonModel>,
-    onClick: (PokemonModel) -> Unit
+    onClick: (PokemonModel) -> Unit,
+    innerPadding: PaddingValues
 ) {
     val listState = rememberLazyGridState()
 
-    Column(modifier = Modifier.fillMaxSize()) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(innerPadding)
+    ) {
         Text(
             text = "Favorite",
             style = MaterialTheme.typography.headlineSmall,
@@ -160,6 +168,7 @@ fun FavoriteListScreenContentPreview() {
 
     FavoriteListScreenContent(
         favorites = sampleList,
-        onClick = {}
+        onClick = {},
+        innerPadding = PaddingValues(0.dp)
     )
 }
