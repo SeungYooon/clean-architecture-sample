@@ -1,6 +1,7 @@
-package com.android.detail
+package com.android.detail.state
 
-import com.android.core.model.PokemonDetailModel
+import com.android.common.model.PokemonDetailModel
+
 
 sealed class PokemonDetailUiState {
     data object Loading : PokemonDetailUiState()

@@ -1,4 +1,4 @@
-package com.android.list
+package com.android.list.state
 
 sealed class PokemonListUiState {
     data object Loading : PokemonListUiState()

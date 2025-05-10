@@ -1,4 +1,4 @@
-package com.android.detail
+package com.android.detail.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -46,10 +46,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import coil.compose.rememberAsyncImagePainter
+import com.android.common.model.PokemonDetailModel
 import com.android.core.component.InfoCard
-import com.android.core.model.PokemonDetailModel
 import com.android.core.util.FavoriteStatusUpdater
 import com.android.core.util.buildPokemonImageUrl
+import com.android.detail.state.PokemonDetailUiState
+import com.android.detail.viewmodel.DetailViewModel
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)

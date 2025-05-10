@@ -1,10 +1,11 @@
-package com.android.core.mapper
+package com.android.common.mapper
 
-import com.android.core.model.PokemonDetailModel
-import com.android.core.model.PokemonModel
+import com.android.common.model.PokemonDetailModel
+import com.android.common.model.PokemonModel
 import com.android.core.util.buildPokemonImageUrl
 import com.android.domain.entity.PokemonDetailEntity
 import com.android.domain.entity.PokemonEntity
+
 
 object PokemonMapper {
 

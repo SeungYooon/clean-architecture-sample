@@ -8,6 +8,5 @@ android {
 }
 
 dependencies {
-    implementation(project(":domain"))
     implementation(libs.androidx.navigation.compose)
 }

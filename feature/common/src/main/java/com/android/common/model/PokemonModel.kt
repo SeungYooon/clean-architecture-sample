@@ -1,6 +1,5 @@
-package com.android.core.model
+package com.android.common.model
 
-// PokemonModel.kt
 data class PokemonModel(
     val id: Int,
     val name: String,

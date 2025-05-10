@@ -1,9 +1,9 @@
-package com.android.favorite
+package com.android.favorite.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.android.core.mapper.PokemonMapper
-import com.android.core.model.PokemonModel
+import com.android.common.mapper.PokemonMapper
+import com.android.common.model.PokemonModel
 import com.android.domain.usecase.GetFavoriteListUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted

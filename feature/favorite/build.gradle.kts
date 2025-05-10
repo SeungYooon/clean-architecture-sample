@@ -12,6 +12,7 @@ android {
 dependencies {
     implementation(project(":core"))
     implementation(project(":domain"))
+    implementation(project(":feature:common"))
 
     implementation(libs.coil.compose)
     implementation(libs.androidx.navigation.compose)

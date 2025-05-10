@@ -14,9 +14,9 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.android.core.component.BottomNavigationBar
 import com.android.core.navigation.BottomNavItem
-import com.android.detail.DetailViewModel
-import com.android.favorite.FavoriteViewModel
-import com.android.list.PokemonListViewModel
+import com.android.detail.viewmodel.DetailViewModel
+import com.android.favorite.viewmodel.FavoriteViewModel
+import com.android.list.viewmodel.PokemonListViewModel
 
 @Composable
 fun AppNavigation() {

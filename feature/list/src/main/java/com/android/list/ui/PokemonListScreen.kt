@@ -1,4 +1,4 @@
-package com.android.list
+package com.android.list.ui
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
@@ -45,10 +45,12 @@ import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
 import coil.compose.AsyncImagePainter
 import coil.compose.rememberAsyncImagePainter
+import com.android.common.model.PokemonModel
 import com.android.core.component.ErrorContent
-import com.android.core.model.PokemonModel
 import com.android.core.navigation.DetailNav
 import com.android.core.util.buildPokemonImageUrl
+import com.android.list.state.PokemonListUiState
+import com.android.list.viewmodel.PokemonListViewModel
 
 @Composable
 fun PokemonListScreen(

@@ -1,8 +1,9 @@
-package com.android.detail
+package com.android.detail.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.android.core.mapper.PokemonMapper
+import com.android.common.mapper.PokemonMapper
+import com.android.detail.state.PokemonDetailUiState
 import com.android.domain.usecase.AddDetailFavoriteUseCase
 import com.android.domain.usecase.AddFavoriteUseCase
 import com.android.domain.usecase.GetFavoriteListUseCase

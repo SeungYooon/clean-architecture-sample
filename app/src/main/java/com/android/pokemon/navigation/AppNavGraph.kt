@@ -7,12 +7,12 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.android.core.navigation.BottomNavItem
 import com.android.core.navigation.DetailNav
-import com.android.detail.DetailScreen
-import com.android.detail.DetailViewModel
-import com.android.favorite.FavoriteListScreen
-import com.android.favorite.FavoriteViewModel
-import com.android.list.PokemonListScreen
-import com.android.list.PokemonListViewModel
+import com.android.detail.ui.DetailScreen
+import com.android.detail.viewmodel.DetailViewModel
+import com.android.favorite.ui.FavoriteListScreen
+import com.android.favorite.viewmodel.FavoriteViewModel
+import com.android.list.ui.PokemonListScreen
+import com.android.list.viewmodel.PokemonListViewModel
 
 
 @Composable

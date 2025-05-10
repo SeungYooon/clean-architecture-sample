@@ -1,4 +1,4 @@
-package com.android.favorite
+package com.android.favorite.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -30,9 +30,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import coil.compose.rememberAsyncImagePainter
-import com.android.core.model.PokemonModel
+import com.android.common.model.PokemonModel
 import com.android.core.navigation.DetailNav
 import com.android.core.util.buildPokemonImageUrl
+import com.android.favorite.viewmodel.FavoriteViewModel
 
 @Composable
 fun FavoriteListScreen(

@@ -1,16 +1,17 @@
-package com.android.list
+package com.android.list.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import androidx.paging.map
-import com.android.core.mapper.PokemonMapper
-import com.android.core.model.PokemonModel
+import com.android.common.mapper.PokemonMapper
+import com.android.common.model.PokemonModel
 import com.android.core.util.FavoriteStatusUpdater
 import com.android.domain.usecase.GetFavoriteListUseCase
 import com.android.domain.usecase.GetPokemonPagingUseCase
 import com.android.domain.usecase.ToggleFavoriteUseCase
+import com.android.list.state.PokemonListUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
